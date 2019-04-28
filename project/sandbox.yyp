@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "1059b026-3a2a-4ab3-b3d8-335e4c893654",
+            "Value": {
+                "id": "25672720-b5d5-4a50-9578-cccf672a45f6",
+                "resourcePath": "sounds\\sn_SandStorm\\sn_SandStorm.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "16648a91-0ae7-4c02-be47-698f59422205",
             "Value": {
                 "id": "ad477959-9dc6-41df-b796-4a955b8d4269",
