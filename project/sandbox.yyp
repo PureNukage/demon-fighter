@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "6daccdf8-36af-4cb7-88d3-b1ef4e9d1bcf",
+            "Value": {
+                "id": "655c2b59-a7ec-4a12-b762-4837048d15d8",
+                "resourcePath": "objects\\o_box\\o_box.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "7f7fbb0e-d9a9-4949-a092-d663f397c832",
             "Value": {
                 "id": "1d666d56-c76c-4370-b2cb-f46460313fe7",
