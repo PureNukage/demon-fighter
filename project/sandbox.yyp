@@ -263,6 +263,22 @@
             }
         },
         {
+            "Key": "f41c0ba7-c666-4148-8383-161aa88d010b",
+            "Value": {
+                "id": "7bb610a4-c945-4904-be72-1a12f62243cb",
+                "resourcePath": "objects\\o_demon4\\o_demon4.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f539696a-2967-4c62-9221-e0d3cee89d87",
+            "Value": {
+                "id": "4c2638e2-4717-4956-9025-3a3081c1c959",
+                "resourcePath": "sprites\\s_demon4\\s_demon4.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f5e022c7-327d-4f90-bac0-d15e6bfe7604",
             "Value": {
                 "id": "8a2cf0b8-d910-47a6-9b68-1cf3c24199ad",
