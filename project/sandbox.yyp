@@ -98,7 +98,7 @@
             "Key": "48ab2bef-3db9-4d96-a503-302e32de3935",
             "Value": {
                 "id": "0a0ec192-e8fa-4464-a693-4f93ea359f6b",
-                "resourcePath": "objects\\o_box2\\o_box2.yy",
+                "resourcePath": "objects\\o_demon2\\o_demon2.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -130,7 +130,7 @@
             "Key": "6daccdf8-36af-4cb7-88d3-b1ef4e9d1bcf",
             "Value": {
                 "id": "655c2b59-a7ec-4a12-b762-4837048d15d8",
-                "resourcePath": "objects\\o_box\\o_box.yy",
+                "resourcePath": "objects\\o_demon1\\o_demon1.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -202,7 +202,7 @@
             "Key": "c51450bd-b3dd-4a94-b7f8-8fa28944147a",
             "Value": {
                 "id": "1015fabc-45da-423a-8bf0-38b859998830",
-                "resourcePath": "objects\\o_box3\\o_box3.yy",
+                "resourcePath": "objects\\o_demon3\\o_demon3.yy",
                 "resourceType": "GMObject"
             }
         },
