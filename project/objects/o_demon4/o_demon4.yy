@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "o_demon4",
     "eventList": [
-        
+        {
+            "id": "6591db45-5bdd-43e9-8e1e-98c942d227e1",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "f41c0ba7-c666-4148-8383-161aa88d010b"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
