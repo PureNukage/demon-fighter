@@ -1,4 +1,4 @@
-var color, number
+//var color, number
 
 for(var i=0; i<3; i++) {
     number[i] = irandom_range(0,255)

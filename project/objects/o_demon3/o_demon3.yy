@@ -4,16 +4,7 @@
     "mvc": "1.0",
     "name": "o_demon3",
     "eventList": [
-        {
-            "id": "9494561a-cdc0-4c0c-b49a-d5ad9226175f",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "c51450bd-b3dd-4a94-b7f8-8fa28944147a"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
