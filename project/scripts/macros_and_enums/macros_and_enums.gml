@@ -1,0 +1,4 @@
+enum gui {
+	text,
+	selected
+}
