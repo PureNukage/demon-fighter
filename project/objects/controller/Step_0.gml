@@ -23,7 +23,10 @@ if gamepad_is_connected(0) == 0 {
 		}
 		_x += 128
 	}
-} else {   
+} else {
+	if gui_socket_selected == -1 {
+		gui_socket_selected = 0	
+	}
 	if haxis == 1 or haxis == -1 {
 		gui_socket[gui_socket_selected,gui.selected] = 0
 		gui_socket_selected = gui_socket_selected + haxis
