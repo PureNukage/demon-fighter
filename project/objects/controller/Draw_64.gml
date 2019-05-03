@@ -1,7 +1,15 @@
 #region Debug
 
-draw_text(15,15,string(gamepad_axis_value(0,gp_axislh)))
-draw_text(15,30,string(gamepad_get_device_count()))
+if debug == true { 
+	draw_set_color(c_gray)
+	draw_rectangle(614,14,1009,220,false)
+	
+	draw_set_color(c_black)
+	draw_text(630,25,"Gamepad Count: ")
+	draw_text(913,25,string(gamepad_get_device_count()))
+	draw_text(630,40,"Gamepad Left-Axis Horizontal: ")
+	draw_text(913,40,string(gamepad_axis_value(0,gp_axislh)))
+}
 
 
 
