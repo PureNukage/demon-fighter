@@ -14,6 +14,11 @@ gui_socket[2,gui.text] = "Item"
 gui_socket[0,gui.selected] = 0
 gui_socket[1,gui.selected] = 0
 gui_socket[2,gui.selected] = 0
+if gamepad_is_connected(0) == 0 {
+	gui_socket_selected = -1
+} else {
+	gui_socket_selected = 0	
+}
 
 //Turn Order Sprites
 gui_sprites[0] = s_demon1

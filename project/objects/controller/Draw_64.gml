@@ -1,7 +1,14 @@
-//Debug
+#region Debug
+
 draw_text(15,15,string(gamepad_axis_value(0,gp_axislh)))
+draw_text(15,30,string(gamepad_get_device_count()))
+
+
+
+#endregion
 
 #region Combat Bar
+
 draw_set_color(c_gui_background)
 draw_rectangle(9,635,403,727,false)
 

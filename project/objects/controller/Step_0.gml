@@ -12,11 +12,19 @@ if haxis == -1 {
 
 //GUI Highlight 
 var _x = 19
-for(var i=0;i<3;i++) {
-	if point_in_rectangle(mouse_x,mouse_y,_x,645,_x+118,716) {
-		gui_socket[i,gui.selected] = 1
-	} else {
-		gui_socket[i,gui.selected] = 0	
+if gamepad_is_connected(0) == 0 {
+	for(var i=0;i<3;i++) {
+		if point_in_rectangle(mouse_x,mouse_y,_x,645,_x+118,716) {
+			gui_socket[i,gui.selected] = 1
+		} else {
+			gui_socket[i,gui.selected] = 0	
+		}
+		_x += 128
 	}
-	_x += 128
+} else {   
+	if haxis == 1 or haxis == -1 {
+		gui_socket[gui_socket_selected,gui.selected] = 0
+		gui_socket_selected = gui_socket_selected + haxis
+		gui_socket[gui_socket_selected,gui.selected] = 1
+	} 
 }
