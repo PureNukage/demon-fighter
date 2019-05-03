@@ -1,4 +1,6 @@
-if f1 {
+scr_controls()
+
+if control {
 	debug = !debug
 }	
 
