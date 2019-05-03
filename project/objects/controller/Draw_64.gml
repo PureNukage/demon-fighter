@@ -6,7 +6,7 @@ if debug == true {
 	
 	draw_set_color(c_black)
 	draw_text(630,25,"Gamepad Count: ")
-	draw_text(913,25,string(gamepad_get_device_count()))
+	draw_text(913,25,string(gamepad_is_connected(0)))
 	draw_text(630,40,"Gamepad Left-Axis Horizontal: ")
 	draw_text(913,40,string(gamepad_axis_value(0,gp_axislh)))
 }
