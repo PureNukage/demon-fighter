@@ -4,11 +4,16 @@ debug = false
 //Colors
 c_gui_background = make_color_rgb(20,92,52)
 c_gui_foreground = make_color_rgb(93,176,92)
+c_gui_highlight = make_color_rgb(129,204,128)
+//c_gui_pressed = make_color_rgb()
 
 //Gui Sockets
-gui_socket[0] = "Attack"
-gui_socket[1] = "Magic"
-gui_socket[2] = "Item"
+gui_socket[0,gui.text] = "Attack"
+gui_socket[1,gui.text] = "Magic"
+gui_socket[2,gui.text] = "Item"
+gui_socket[0,gui.selected] = 0
+gui_socket[1,gui.selected] = 0
+gui_socket[2,gui.selected] = 0
 
 //Turn Order Sprites
 gui_sprites[0] = s_demon1
