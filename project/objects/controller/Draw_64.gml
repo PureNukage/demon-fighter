@@ -25,7 +25,7 @@ _x = 17
 
 //Combat Bar
 for(var i=0;i<3;i++) {
-	if gui_socket[i,gui.selected] == 1 {
+	if gui_socket[i,gui.selected] == 1 and gui_socket_side[i,gui.selected] == 0 {
 		draw_set_color(c_gui_highlight)
 	} else {
 		draw_set_color(c_gui_foreground)
@@ -51,8 +51,14 @@ for(var i=0;i<3;i++) {
 	if (gui_socket[i,gui.selected] == 1) {
 		draw_set_color(c_gui_background)
 		draw_rectangle(_darkg[i],495,_darkg[i]+134,582,false)
-		draw_set_color(c_gui_foreground)
+		if gui_socket_side[i,gui.selected] == 1 {
+			draw_set_color(c_gui_highlight)	
+		} else {
+			draw_set_color(c_gui_foreground)
+		}
 		draw_rectangle(_lightg[i],503,_lightg[i]+121,574,false)
+		draw_set_color(c_black)
+		draw_text(_lightg[i]+63,531,gui_socket_side[0,gui.text])
 	}
 }
 

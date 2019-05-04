@@ -14,6 +14,10 @@ gui_socket[2,gui.text] = "Item"
 gui_socket[0,gui.selected] = 0
 gui_socket[1,gui.selected] = 0
 gui_socket[2,gui.selected] = 0
+gui_socket_side[0,gui.text] = "Defend"
+gui_socket_side[1,gui.text] = "Change"
+gui_socket_side[0,gui.selected] = 0
+gui_socket_side[1,gui.selected] = 0
 if gamepad_is_connected(0) == 0 {
 	gui_socket_selected = -1
 } else {
