@@ -9,10 +9,12 @@ if debug == true {
 	draw_text(913,25,string(gamepad_is_connected(0)))
 	draw_text(630,40,"Gamepad Left-Axis Horizontal: ")
 	draw_text(913,40,string(gamepad_axis_value(0,gp_axislh)))
-	draw_text(630,55,"gui_socket_selected: ")
-	draw_text(913,55,string(gui_socket_selected))
-	draw_text(630,70,"gui_scrollTimer: ")
-	draw_text(913,70,string(gui_scrollTimer))
+	draw_text(630,55,"Gamepad Left-Axis Vertical: ")
+	draw_text(913,55,string(gamepad_axis_value(0,gp_axislv)))
+	draw_text(630,70,"gui_socket_selected: ")
+	draw_text(913,70,string(gui_socket_selected))
+	draw_text(630,85,"gui_scrollTimer: ")
+	draw_text(913,85,string(gui_scrollTimer))
 }
 
 
