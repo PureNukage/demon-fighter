@@ -22,10 +22,14 @@ if gamepad_is_connected(0) == 0 {
 			gui_socket_top[i,gui.selected] = 0
 			gui_socket_bottom[i,gui.selected] = 0
 		} else if point_in_rectangle(mouse_x,mouse_y,_x-8,495,_x+134,582) {
-			gui_socket_top[i,gui.selected] = 1
-			gui_socket_bottom[i,gui.selected] = 0
+			if point_in_rectangle(mouse_x,mouse_y,_x,503,_x+128,574) {
+				gui_socket_top[i,gui.selected] = 1
+				gui_socket_bottom[i,gui.selected] = 0
+			}
 		} else if point_in_rectangle(mouse_x,mouse_y,_x-8,655,_x+134,742) {
-			gui_socket_bottom[i,gui.selected] = 1
+			if point_in_rectangle(mouse_x,mouse_y,_x,663,_x+128,734) {
+				gui_socket_bottom[i,gui.selected] = 1
+			}
 		} else {
 			gui_socket[i,gui.selected] = 0
 			gui_socket_top[i,gui.selected] = 0
