@@ -25,7 +25,7 @@ _x = 17
 
 //Combat Bar
 for(var i=0;i<3;i++) {
-	if gui_socket[i,gui.selected] == 1 and gui_socket_side[i,gui.selected] == 0 {
+	if gui_socket[i,gui.selected] == 1 and gui_socket_top[i,gui.selected] == 0 {
 		draw_set_color(c_gui_highlight)
 	} else {
 		draw_set_color(c_gui_foreground)
@@ -38,6 +38,7 @@ for(var i=0;i<3;i++) {
 }
  
 //Change / Defend
+var _x = 17
 var _darkg, _lightg
 _darkg[0] = 9
 _darkg[1] = 136
@@ -51,14 +52,28 @@ for(var i=0;i<3;i++) {
 	if (gui_socket[i,gui.selected] == 1) {
 		draw_set_color(c_gui_background)
 		draw_rectangle(_darkg[i],495,_darkg[i]+134,582,false)
-		if gui_socket_side[i,gui.selected] == 1 {
+		if gui_socket_top[i,gui.selected] == 1 {
 			draw_set_color(c_gui_highlight)	
 		} else {
 			draw_set_color(c_gui_foreground)
 		}
 		draw_rectangle(_lightg[i],503,_lightg[i]+121,574,false)
 		draw_set_color(c_black)
-		draw_text(_lightg[i]+63,531,gui_socket_side[0,gui.text])
+		draw_text(_lightg[i]+63,531,gui_socket_top[0,gui.text])
+		
+		draw_set_color(c_gui_background)
+		draw_rectangle(_darkg[i],655,_darkg[i]+134,742,false)
+		
+		
+		if gui_socket_bottom[i,gui.selected] == 1 {
+			draw_set_color(c_gui_highlight)
+		} else {
+			draw_set_color(c_gui_foreground)	
+		}
+		draw_rectangle(_lightg[i],663,_lightg[i]+121,734,false)
+		draw_set_color(c_black)
+		draw_text(_lightg[i]+63,691,gui_socket_bottom[0,gui.text])
+		
 	}
 }
 
