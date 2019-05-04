@@ -45,6 +45,7 @@ if gamepad_is_connected(0) == 0 {
 		if (where_we_going != -1 or where_we_going != 3) {
 			gui_socket[gui_socket_selected,gui.selected] = 0
 			gui_socket_selected = gui_socket_selected + input
+			show_message(string(gui_socket_selected+input))
 			gui_socket[gui_socket_selected,gui.selected] = 1
 		}
 	} 
