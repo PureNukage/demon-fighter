@@ -11,6 +11,7 @@ if haxis == -1 {
 } else if haxis == 1 {
 	show_message("right here")	
 }
+var vaxis = gamepad_axis_value(0,gp_axislv)
 
 //GUI Highlight 
 var _x = 19
@@ -45,4 +46,19 @@ if gamepad_is_connected(0) == 0 {
 			gui_socket[gui_socket_selected,gui.selected] = 1
 		}
 	} 
+	
+	if vaxis == 1 {
+		if gui_socket_bottom[gui_socket_selected,gui.selected] == 1 {
+			gui_socket_bottom[gui_socket_selected,gui.selected] = 0
+		} else {
+			gui_socket_top[gui_socket_selected,gui.selected] = 1
+		}
+	} else if vaxis == -1 {
+		if gui_socket_bottom[gui_socket_selected,gui.selected] == 1 {
+			gui_socket_bottom[gui_socket_selected,gui.selected] = 1
+		} else {
+			gui_socket_top[gui_socket_selected,gui.selected] = 0
+		}
+	} 
+	
 }
