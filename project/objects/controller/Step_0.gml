@@ -6,11 +6,6 @@ if control {
 
 //Controller
 var haxis = gamepad_axis_value(0,gp_axislh)
-if haxis == -1 { 
-	show_message("left here")
-} else if haxis == 1 {
-	show_message("right here")	
-}
 var vaxis = gamepad_axis_value(0,gp_axislv)
 
 //GUI Highlight 
@@ -42,7 +37,10 @@ if gamepad_is_connected(0) == 0 {
 	if gui_socket_selected == -1 {
 		gui_socket_selected = 0	
 	}
-	if haxis == 1 or haxis == -1 {
+	if haxis > 0.8 or haxis < -0.8 {
+		var input
+		if (haxis > 0.8) input = 1
+		if (haxis < -0.8) input = -1
 		var where_we_going = gui_socket_selected + haxis
 		if (where_we_going != -1 or where_we_going != 3) {
 			gui_socket[gui_socket_selected,gui.selected] = 0
@@ -51,13 +49,13 @@ if gamepad_is_connected(0) == 0 {
 		}
 	} 
 	
-	if vaxis == 1 {
+	if vaxis > 0.8 {
 		if gui_socket_bottom[gui_socket_selected,gui.selected] == 1 {
 			gui_socket_bottom[gui_socket_selected,gui.selected] = 0
 		} else {
 			gui_socket_top[gui_socket_selected,gui.selected] = 1
 		}
-	} else if vaxis == -1 {
+	} else if vaxis < -0.8 {
 		if gui_socket_bottom[gui_socket_selected,gui.selected] == 1 {
 			gui_socket_bottom[gui_socket_selected,gui.selected] = 1
 		} else {
