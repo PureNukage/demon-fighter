@@ -4,10 +4,6 @@ if control {
 	debug = !debug
 }	
 
-//Controller
-var haxis = gamepad_axis_value(0,gp_axislh)
-var vaxis = gamepad_axis_value(0,gp_axislv)
-
 //GUI Highlight 
 var _x = 19
 if gamepad_is_connected(0) == 0 {
@@ -37,26 +33,26 @@ if gamepad_is_connected(0) == 0 {
 	if gui_socket_selected == -1 {
 		gui_socket_selected = 0	
 	}
-	if haxis > 0.8 or haxis < -0.8 {
+	if leftstick_h > 0.8 or leftstick_h < -0.8 and gui_scrollTimer == 0 {
 		var input
-		if (haxis > 0.8) input = 1
-		if (haxis < -0.8) input = -1
+		if (leftstick_h > 0.8) input = 1
+		if (leftstick_h < -0.8) input = -1
 		var where_we_going = gui_socket_selected + input
-		if (where_we_going != -1 or where_we_going != 3) {
+		if (where_we_going >= -1 or where_we_going < 3) {
 			gui_socket[gui_socket_selected,gui.selected] = 0
 			gui_socket_selected = gui_socket_selected + input
-			show_message(string(gui_socket_selected+input))
 			gui_socket[gui_socket_selected,gui.selected] = 1
+			gui_scrollTimer = 60
 		}
 	} 
 	
-	if vaxis > 0.8 {
+	if leftstick_v > 0.8 {
 		if gui_socket_bottom[gui_socket_selected,gui.selected] == 1 {
 			gui_socket_bottom[gui_socket_selected,gui.selected] = 0
 		} else {
 			gui_socket_top[gui_socket_selected,gui.selected] = 1
 		}
-	} else if vaxis < -0.8 {
+	} else if leftstick_v < -0.8 {
 		if gui_socket_bottom[gui_socket_selected,gui.selected] == 1 {
 			gui_socket_bottom[gui_socket_selected,gui.selected] = 1
 		} else {

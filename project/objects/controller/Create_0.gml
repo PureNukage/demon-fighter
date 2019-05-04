@@ -19,6 +19,7 @@ gui_socket_top[0,gui.selected] = 0
 gui_socket_top[1,gui.selected] = 0
 gui_socket_bottom[0,gui.text] = "Change"
 gui_socket_bottom[0,gui.selected] = 0
+gui_scrollTimer = 0
 
 if gamepad_is_connected(0) == 0 {
 	gui_socket_selected = -1
