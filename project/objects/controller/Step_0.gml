@@ -40,6 +40,13 @@ if gamepad_is_connected(0) == 0 {
 		if (leftstick_h < -0.8) { input = -1 }
 		var where_we_going = gui_socket_selected + input
 		if (where_we_going != -1 and where_we_going != 3) {
+			//Change / Defend back to 0
+			if gui_socket_top[gui_socket_selected,gui.selected] == 1 {
+				gui_socket_top[gui_socket_selected,gui.selected] = 0	
+			}
+			if gui_socket_bottom[gui_socket_selected,gui.selected] == 1 {
+				gui_socket_bottom[gui_socket_selected,gui.selected] = 0 	
+			}
 			gui_socket[gui_socket_selected,gui.selected] = 0
 			gui_socket_selected = gui_socket_selected + input
 			gui_socket[gui_socket_selected,gui.selected] = 1
