@@ -25,7 +25,7 @@ _x = 17
 
 //Combat Bar
 for(var i=0;i<3;i++) {
-	if gui_socket[i,gui.selected] == 1 and gui_socket_top[i,gui.selected] == 0 {
+	if gui_socket[i,gui.selected] == 1 and gui_socket_top[i,gui.selected] == 0  and gui_socket_bottom[i,gui.selected] == 0 {
 		draw_set_color(c_gui_highlight)
 	} else {
 		draw_set_color(c_gui_foreground)
