@@ -15,25 +15,45 @@ if debug == true {
 
 #endregion
 
-#region Combat Bar
+#region Combat Bar and Change/Defend
 
 draw_set_color(c_gui_background)
-draw_rectangle(9,635,403,727,false)
+draw_rectangle(9,575,395,662,false)
 
 var _x, 
-_x = 19
+_x = 17
 
+//Combat Bar
 for(var i=0;i<3;i++) {
 	if gui_socket[i,gui.selected] == 1 {
 		draw_set_color(c_gui_highlight)
 	} else {
 		draw_set_color(c_gui_foreground)
 	}
-	draw_rectangle(_x,645,_x+118,716,false)
+	draw_rectangle(_x,583,_x+118,654,false)
 	draw_set_color(c_black)
 	draw_set_halign(fa_center)
-	draw_text(_x+59,672,gui_socket[i,gui.text])
+	draw_text(_x+59,609,gui_socket[i,gui.text])
 	_x += 128
+}
+ 
+//Change / Defend
+var _darkg, _lightg
+_darkg[0] = 9
+_darkg[1] = 136
+_darkg[2] = 262
+
+_lightg[0] = 17
+_lightg[1] = 143
+_lightg[2] = 269
+
+for(var i=0;i<3;i++) {
+	if (gui_socket[i,gui.selected] == 1) {
+		draw_set_color(c_gui_background)
+		draw_rectangle(_darkg[i],495,_darkg[i]+134,582,false)
+		draw_set_color(c_gui_foreground)
+		draw_rectangle(_lightg[i],503,_lightg[i]+121,574,false)
+	}
 }
 
 #endregion
