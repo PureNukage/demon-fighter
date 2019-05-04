@@ -41,10 +41,10 @@ if gamepad_is_connected(0) == 0 {
 		var input
 		if (haxis > 0.8) input = 1
 		if (haxis < -0.8) input = -1
-		var where_we_going = gui_socket_selected + haxis
+		var where_we_going = gui_socket_selected + input
 		if (where_we_going != -1 or where_we_going != 3) {
 			gui_socket[gui_socket_selected,gui.selected] = 0
-			gui_socket_selected = gui_socket_selected + haxis
+			gui_socket_selected = gui_socket_selected + input
 			gui_socket[gui_socket_selected,gui.selected] = 1
 		}
 	} 
