@@ -1,11 +1,19 @@
 //Variables
 debug = false
 
+//Starting State
+c_state = c_state.targeting
+
 //Colors
 c_gui_background = make_color_rgb(20,92,52)
 c_gui_foreground = make_color_rgb(93,176,92)
 c_gui_highlight = make_color_rgb(129,204,128)
 //c_gui_pressed = make_color_rgb()
+
+//Object Vars
+object_mouseover = 0
+object_mouseover_previous = 0
+object_selected = 0
 
 //Gui Sockets
 gui_socket[0,gui.text] = "Attack"
