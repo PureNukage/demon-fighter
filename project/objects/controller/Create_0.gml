@@ -1,4 +1,4 @@
-s_//Variables
+//Variables
 debug = false
 
 //Colors
