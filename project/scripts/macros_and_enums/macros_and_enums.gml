@@ -8,3 +8,9 @@ enum c_state {
 	targeting,
 	notMyTurn
 }
+
+enum fframe {
+	first,
+	second, 
+	third
+}

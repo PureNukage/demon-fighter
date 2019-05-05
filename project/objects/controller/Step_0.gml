@@ -1,5 +1,19 @@
 scr_controls()
 
+#region fframe 
+
+switch fframe 
+{
+	case fframe.first: fframe = fframe.second break;
+	case fframe.second: 
+		turn_current = ds_queue_dequeue(turn_queue)
+		fframe = fframe.third
+	break;
+	case fframe.third: break;
+}
+
+#endregion
+
 if control {
 	debug = !debug
 }	

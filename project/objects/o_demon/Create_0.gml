@@ -4,3 +4,5 @@ if x = 608+32 sprite_index = s_demon3
 
 highlight = false
 
+ds_queue_enqueue(controller.turn_queue,id)
+

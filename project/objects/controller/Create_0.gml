@@ -3,6 +3,7 @@ debug = false
 
 //Starting State
 c_state = c_state.targeting
+fframe = fframe.first
 
 //Colors
 c_gui_background = make_color_rgb(20,92,52)
@@ -14,6 +15,10 @@ c_gui_highlight = make_color_rgb(129,204,128)
 object_mouseover = 0
 object_mouseover_previous = 0
 object_selected = 0
+
+//Turn Queue
+turn_queue = ds_queue_create()
+turn_current = 0
 
 //Gui Sockets
 gui_socket[0,gui.text] = "Attack"
