@@ -6,5 +6,9 @@ highlight = false
 
 ds_queue_enqueue(controller.turn_queue,id)
 
+ds_list_add(controller.my_demons,id)
+
+hp = irandom_range(12,16)
+
 unit = unit.friendly
 

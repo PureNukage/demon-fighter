@@ -22,7 +22,9 @@ turn_current = 0
 
 //Targeting
 target_unitType = -1
-target_unitType = unit.enemy
+
+//The Players Demons
+my_demons = ds_list_create()
 
 
 //Gui Sockets

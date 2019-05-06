@@ -30,12 +30,19 @@ switch c_state
 					gui_socket[i,gui.selected] = 1
 					gui_socket_top[i,gui.selected] = 0
 					gui_socket_bottom[i,gui.selected] = 0
+					
+					//Left-Clicking the Combat Bar buttons
 					if leftclick {
 						switch(i)
 						{
-							case 0:	c_state = c_state.targeting break;	
+							case 0:									//Attack
+								c_state = c_state.targeting 
+								target_unitType = unit.enemy
+							break;	
 						}
 					}
+					
+					
 				} else if point_in_rectangle(mouse_x,mouse_y,_x-8,495,_x+134,582) {
 					if point_in_rectangle(mouse_x,mouse_y,_x,503,_x+128,574) {
 						gui_socket_top[i,gui.selected] = 1
@@ -137,7 +144,11 @@ switch c_state
 				
 				//Left-Click
 				if leftclick {
-					object_mouseover.hp -= 5
+					var damage = irandom_range(2,4)
+					object_mouseover.hp -= damage
+					
+					var _popup = instance_create_layer(object_mouseover.x+128,y+128,"Instances",o_popupText)
+					_popup.text = string(damage)
 					
 					turn_current.highlight = false
 					
