@@ -15,7 +15,9 @@ if controller.turn_current = id {
 		turn_current.highlight = false
 					
 		ds_queue_enqueue(turn_queue,turn_current)
-		turn_current = ds_queue_dequeue(turn_queue)
+		turn_current = ds_queue_dequeue(turn_queue)	
+		turn_number_current++
+		
 	}
 	timer = irandom_range(20,35)	
 	}

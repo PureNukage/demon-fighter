@@ -19,6 +19,8 @@ object_selected = 0
 //Turn Queue
 turn_queue = ds_queue_create()
 turn_current = 0
+turn_number_current = 0
+turn_number_previous = -1
 
 //Targeting
 target_unitType = -1
@@ -53,10 +55,11 @@ if gamepad_is_connected(0) == 0 {
 }
 
 //Turn Order Sprites
-gui_sprites[0] = s_demon1
-gui_sprites[1] = s_demon2
-gui_sprites[2] = s_demon3
-gui_sprites[3] = s_demon4
+gui_sprites = ds_list_create()
+gui_sprites[| 0] = s_demon1
+gui_sprites[| 1] = s_demon2
+gui_sprites[| 2] = s_demon3
+gui_sprites[| 3] = s_demon4
 scr_controls()
 
 //audio_play_sound(sn_SandStorm,0,true)

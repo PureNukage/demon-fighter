@@ -96,7 +96,7 @@ _y = 93
 for (var i=0;i<4;i++) {
 	draw_set_color(c_gui_foreground)
 	draw_rectangle(13,_y,93,_y+73,false)
-	draw_sprite(gui_sprites[i],0,21,_y+3)
+	draw_sprite(gui_sprites[| i],0,21,_y+3)
 	_y += 79
 }
 

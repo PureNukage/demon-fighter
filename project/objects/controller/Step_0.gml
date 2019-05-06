@@ -6,7 +6,7 @@ switch fframe
 {
 	case fframe.first: fframe = fframe.second break;
 	case fframe.second: 
-		turn_current = ds_queue_dequeue(turn_queue)
+		turn_current = ds_queue_dequeue(turn_queue)		
 		fframe = fframe.third
 	break;
 	case fframe.third: break;
@@ -17,6 +17,21 @@ switch fframe
 if control {
 	debug = !debug
 }	
+
+//Updating Turn Order
+if (turn_number_current - turn_number_previous) > 1 {
+	turn_number_previous++
+	
+	//Unpackage the queue order
+	var queue = ds_queue_create()
+	ds_queue_copy(queue,turn_queue)
+	for(var i=0;i<ds_queue_size(turn_queue);i++) {
+		var _id = ds_queue_dequeue(queue)
+		gui_sprites[| i+1] = _id.sprite_index
+	}
+	gui_sprites[| 0] = turn_current.sprite_index
+}
+
 
 switch c_state 
 {
@@ -156,6 +171,7 @@ switch c_state
 					turn_current = ds_queue_dequeue(turn_queue)
 					
 					object_mouseover.highlight = false
+					turn_number_current++
 					
 					c_state = c_state.free
 				}
