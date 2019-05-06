@@ -1,4 +1,5 @@
 leftclick = mouse_check_button_pressed(mb_left)
+rightclick = mouse_check_button_pressed(mb_right)
 
 control = keyboard_check_pressed(vk_control)
 
