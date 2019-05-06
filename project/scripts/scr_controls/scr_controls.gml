@@ -1,3 +1,7 @@
 leftclick = mouse_check_button_pressed(mb_left)
+rightclick = mouse_check_button_pressed(mb_right)
 
-f1 = keyboard_check_pressed(vk_f1)
+control = keyboard_check_pressed(vk_control)
+
+leftstick_h = gamepad_axis_value(0,gp_axislh)
+leftstick_v = gamepad_axis_value(0,gp_axislv)
