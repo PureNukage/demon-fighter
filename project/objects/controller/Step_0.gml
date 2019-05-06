@@ -30,6 +30,12 @@ switch c_state
 					gui_socket[i,gui.selected] = 1
 					gui_socket_top[i,gui.selected] = 0
 					gui_socket_bottom[i,gui.selected] = 0
+					if leftclick {
+						switch(i)
+						{
+							case 0:	c_state = c_state.targeting break;	
+						}
+					}
 				} else if point_in_rectangle(mouse_x,mouse_y,_x-8,495,_x+134,582) {
 					if point_in_rectangle(mouse_x,mouse_y,_x,503,_x+128,574) {
 						gui_socket_top[i,gui.selected] = 1
@@ -113,7 +119,12 @@ switch c_state
 		}
 		#endregion
 	break;
-	case c_state.targeting:
+	case c_state.targeting:		
+		#region State: Targeting
+		
+		if rightclick {
+			c_state = c_state.free	
+		}
 		
 		if instance_position(mouse_x,mouse_y,all) {
 			object_mouseover = instance_position(mouse_x,mouse_y,all)
@@ -121,7 +132,23 @@ switch c_state
 				object_mouseover_previous.highlight = false
 				object_mouseover_previous = object_mouseover
 			}
-			object_mouseover.highlight = true
+			if object_mouseover.unit == target_unitType {
+				object_mouseover.highlight = true
+				
+				//Left-Click
+				if leftclick {
+					object_mouseover.hp -= 5
+					
+					turn_current.highlight = false
+					
+					ds_queue_enqueue(turn_queue,turn_current)
+					turn_current = ds_queue_dequeue(turn_queue)
+					
+					object_mouseover.highlight = false
+					
+					c_state = c_state.free
+				}
+			}
 			
 		} else { 
 			if object_mouseover != 0 {
@@ -133,6 +160,7 @@ switch c_state
 			}
 		}
 		
+		#endregion
 		
 	break;
 }

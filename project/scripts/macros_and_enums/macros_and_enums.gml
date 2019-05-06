@@ -14,3 +14,8 @@ enum fframe {
 	second, 
 	third
 }
+
+enum unit {
+	enemy,
+	friendly
+}

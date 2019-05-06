@@ -2,7 +2,7 @@
 debug = false
 
 //Starting State
-c_state = c_state.targeting
+c_state = c_state.free
 fframe = fframe.first
 
 //Colors
@@ -19,6 +19,11 @@ object_selected = 0
 //Turn Queue
 turn_queue = ds_queue_create()
 turn_current = 0
+
+//Targeting
+target_unitType = -1
+target_unitType = unit.enemy
+
 
 //Gui Sockets
 gui_socket[0,gui.text] = "Attack"
